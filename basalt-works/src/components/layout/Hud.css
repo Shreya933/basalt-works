@@ -1,0 +1,18 @@
+.rail {
+  position: fixed; z-index: 10; right: var(--gx2); top: 50%; transform: translateY(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+  font: 500 0.66rem/1 var(--f-mono); letter-spacing: 0.16em; color: var(--dim);
+}
+.rail .track { width: 1px; height: 22vh; background: var(--line); position: relative; }
+.rail .fill { position: absolute; left: 0; top: 0; width: 1px; height: 100%; background: var(--ember); transform-origin: top; transform: scaleY(0); }
+.rail b { font-weight: 500; writing-mode: vertical-rl; text-transform: uppercase; }
+
+.readout {
+  position: fixed; z-index: 10; left: var(--gx); bottom: calc(22px + env(safe-area-inset-bottom, 0px));
+  font: 500 0.68rem/1.6 var(--f-mono); letter-spacing: 0.14em; color: var(--dim); text-transform: uppercase;
+}
+.readout em { font-style: normal; color: var(--bone); }
+
+@media (max-width: 760px) {
+  .rail, .readout { display: none; }
+}

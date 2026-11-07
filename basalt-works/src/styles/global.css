@@ -1,0 +1,24 @@
+* { box-sizing: border-box; }
+html { scrollbar-width: none; }
+html::-webkit-scrollbar { display: none; }
+
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--bone);
+  font: 400 16px/1.5 var(--f-body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  overflow-x: hidden;
+}
+
+/* full-screen fixed layers that make up the stage */
+.layer { position: fixed; inset: 0; pointer-events: none; }
+
+.stage { position: fixed; inset: 0; z-index: 2; }
+.stage canvas { display: block; touch-action: pan-y; }
+
+.scroller { width: 1px; }
+
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--bone); outline-offset: 3px; }

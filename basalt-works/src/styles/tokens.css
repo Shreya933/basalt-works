@@ -1,0 +1,18 @@
+:root {
+  --ink: #0b0c0e;          /* charcoal, leaning blue */
+  --ink-2: #14161a;
+  --bone: #ebe6dc;         /* warm off-white */
+  --dim: #8d8f94;
+  --ember: #ff7a1a;        /* the single accent */
+  --line: rgba(235, 230, 220, 0.16);
+
+  --f-display: 'Big Shoulders Display', 'Arial Narrow', Impact, sans-serif;
+  --f-body: 'Instrument Sans', system-ui, sans-serif;
+  --f-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  /* page gutters, safe-area aware */
+  --gx: max(16px, env(safe-area-inset-left, 0px));
+  --gx2: max(16px, env(safe-area-inset-right, 0px));
+
+  color-scheme: dark;
+}

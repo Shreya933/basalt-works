@@ -1,0 +1,11 @@
+.loader {
+  position: fixed; inset: 0; z-index: 50; background: var(--ink);
+  display: grid; place-content: center; justify-items: center; gap: 22px;
+  transition: opacity 0.8s ease, visibility 0.8s;
+}
+.loader.done { opacity: 0; visibility: hidden; }
+.loader .n { font: 900 clamp(5rem, 16vw, 11rem) / 0.85 var(--f-display); color: var(--bone); font-variant-numeric: tabular-nums; }
+.loader .n small { font-size: 0.35em; color: var(--ember); margin-left: 6px; }
+.loader .bar { width: min(260px, 60vw); height: 2px; background: var(--line); }
+.loader .bar i { display: block; height: 100%; background: var(--ember); }
+.loader span.label { font: 500 0.7rem/1 var(--f-mono); letter-spacing: 0.2em; text-transform: uppercase; color: var(--dim); }

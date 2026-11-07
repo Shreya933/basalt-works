@@ -1,0 +1,27 @@
+.nav {
+  position: fixed; z-index: 10; left: 0; right: 0; top: 0;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: calc(18px + env(safe-area-inset-top, 0px)) var(--gx2) 0 var(--gx);
+}
+.logo {
+  white-space: nowrap; display: flex; align-items: center; gap: 10px;
+  font: 800 1.35rem/1 var(--f-display); letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--bone); text-decoration: none;
+}
+.logo i { width: 12px; height: 12px; background: var(--ember); display: block; clip-path: polygon(50% 0, 100% 100%, 0 100%); }
+
+.links { display: flex; align-items: center; gap: 28px; }
+.links a:not(.btn) {
+  font: 500 0.72rem/1 var(--f-mono); letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--dim); text-decoration: none; transition: color 0.2s; padding: 8px 0;
+}
+.links a:not(.btn):hover { color: var(--bone); }
+.links a[aria-current='page'] { color: var(--bone); box-shadow: 0 1px 0 var(--ember); }
+.links .sep { width: 1px; height: 14px; background: var(--line); }
+
+/* phones: keep the two page links, drop section links and the button (the closing section has it) */
+@media (max-width: 760px) {
+  .links { gap: 20px; }
+  .links a:not(.btn):not(.route), .links .sep, .links .btn { display: none; }
+  .logo { font-size: 1.1rem; }
+}

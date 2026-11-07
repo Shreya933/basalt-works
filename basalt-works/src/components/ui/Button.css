@@ -1,0 +1,13 @@
+.btn {
+  white-space: nowrap; display: inline-flex; align-items: center; gap: 10px;
+  font: 600 0.78rem/1 var(--f-mono); letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--ink); background: var(--ember); padding: 14px 20px;
+  text-decoration: none; border: 0; cursor: pointer; transition: transform 0.2s, background 0.2s;
+}
+.btn:hover { background: #ff9140; transform: translateY(-1px); }
+.btn.ghost { background: transparent; color: var(--bone); box-shadow: inset 0 0 0 1px var(--line); }
+.btn.ghost:hover { background: rgba(235, 230, 220, 0.08); }
+
+@media (max-width: 760px) {
+  .btn { padding: 12px 14px; font-size: 0.68rem; }
+}

@@ -1,0 +1,7 @@
+.credits { min-height: 100vh; max-width: 720px; margin: 0 auto; padding: 120px 0 80px; }
+.credits h1 { font: 800 clamp(3rem, 8vw, 5.5rem) / 0.9 var(--f-display); text-transform: uppercase; margin: 0 0 24px; }
+.credits p { color: #b9b9b6; max-width: 52ch; }
+.credits ul { list-style: none; padding: 0; margin: 32px 0; border-top: 1px solid var(--line); }
+.credits li { padding: 16px 0; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.credits li a { color: var(--bone); }
+.credits li span { color: var(--dim); font: 500 0.72rem/1.6 var(--f-mono); letter-spacing: 0.12em; text-transform: uppercase; }
